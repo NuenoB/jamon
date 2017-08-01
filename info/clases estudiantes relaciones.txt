@@ -1,0 +1,3 @@
+enzo -> cleric con lanza
+Nacho -> mago con espada
+Ann -> espadachin
