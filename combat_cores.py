@@ -11,12 +11,12 @@ class combat_core:
     def __init__(self,graphics):
         self.graphics=graphics
         
-    @staticmethod
-    def damage(damage, defence):
-        return max(damage-defence,0)
+#    @staticmethod
+#    def damage(damage, defence):
+#        return max(damage-defence,0)
     
-    def control_turn(graphics,ataquer, defencer):
-        defencer.get_rack(combat_core.damage(ataquer.get_damage(),defencer.get_defence()))
-        if defencer.can_conter():
-            ataquer.get_rack(combat_core.damage(defencer.get_damage(),ataquer.get_defence()))
+    def turn_combat_control(self,ataquer, defender):
+        defender.get_hurt(ataquer.get_damage())
+        if defender.can_conter():
+            ataquer.get_hurt(defender.get_damage())
         

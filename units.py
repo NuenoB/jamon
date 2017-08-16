@@ -21,7 +21,7 @@ class units:
     def def_defence(self):
         return self.defence
     def get_hurt(self,damage_deal):
-        self.hp=self.hp-damage_deal
+        self.hp=self.hp-max((damage_deal-self.defence),0)#not a bug that can heal a unit
         return self.hp
     def is_dead(self):
-        return self.hp<0
+        return self.hp<=0#ha gracias test develomet cosa

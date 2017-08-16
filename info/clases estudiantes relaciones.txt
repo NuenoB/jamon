@@ -1,3 +1,4 @@
-enzo -> cleric con lanza
+Enzo -> cleric con lanza
 Nacho -> mago con espada
 Ann -> espadachin
+Pablito -> 
