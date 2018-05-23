@@ -17,6 +17,6 @@ class combat_core:
     
     def turn_combat_control(self,ataquer, defender):
         defender.get_hurt(ataquer.get_damage())
-        if defender.can_conter():
-            ataquer.get_hurt(defender.get_damage())
-        
+#        if defender.can_conter(): lo commente porque no tiene tests
+#            ataquer.get_hurt(defender.get_damage())
+#        
