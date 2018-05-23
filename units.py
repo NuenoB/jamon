@@ -10,10 +10,12 @@ class units:
     clase que contiene las estadisticas  funciones de una unidad
     """
 
-    def __init__(self,ataque=0,defence=0,hp=0):
+    def __init__(self,ataque=0,defence=0,hp=0,name="jojo",comment="doble platata"):
         self.ataque=ataque
         self.defence=defence
         self.hp=hp
+        self.comment=comment
+        self.name=name
     def can_conter(self):
         return True
     def get_damage(self):
@@ -23,5 +25,7 @@ class units:
     def get_hurt(self,damage_deal):
         self.hp=self.hp-max((damage_deal-self.defence),0)#not a bug that can heal a unit
         return self.hp
+    def get_name(self):
+        return self.name
     def is_dead(self):
         return self.hp<=0#ha gracias test develomet cosa
